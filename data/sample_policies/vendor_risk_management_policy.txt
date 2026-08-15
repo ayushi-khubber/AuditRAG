@@ -1,0 +1,28 @@
+VENDOR AND SUPPLY CHAIN RISK MANAGEMENT POLICY
+
+1. Purpose
+This policy governs how the organization assesses and manages cybersecurity risk introduced
+by third-party vendors and suppliers.
+
+2. Vendor Risk Program
+The security team maintains a supply chain risk management program covering vendor
+onboarding, periodic reassessment, and offboarding. Program objectives and priorities are
+reviewed annually with input from procurement, legal, and business stakeholders.
+
+3. Vendor Risk Assessment
+Prospective vendors that will process Confidential or Restricted data must complete a
+security questionnaire and, for high-risk engagements, provide evidence of independent
+security certification (e.g., SOC 2 Type II). Identified vulnerabilities or gaps must be
+tracked to remediation before contract signature.
+
+4. Contractual Requirements
+Vendor contracts must include data protection, breach notification, and right-to-audit
+clauses consistent with the organization's risk tolerance.
+
+5. Ongoing Monitoring
+Vendors with access to Confidential or Restricted data are reassessed annually. Material
+changes in a vendor's risk profile trigger an off-cycle review.
+
+6. Offboarding
+Upon contract termination, vendor access to organizational systems is revoked and data
+return or destruction is confirmed in writing.

@@ -1,0 +1,29 @@
+DATA BACKUP AND RECOVERY POLICY
+
+1. Purpose
+This policy defines requirements for backing up organizational data and restoring systems
+after a disruptive event.
+
+2. Backup Requirements
+All production databases and file shares classified as Internal or higher must be backed up
+on a daily incremental and weekly full schedule. Backups must be encrypted at rest and in
+transit and stored in a location physically separate from the primary system.
+
+3. Backup Testing
+Backup restoration must be tested on a quarterly basis for a sample of critical systems.
+Test results, including restoration time, are documented and reviewed by the infrastructure
+team lead.
+
+4. Data-at-Rest and Data-in-Transit Protection
+Databases containing Confidential or Restricted data must use encryption at rest. Data
+transmitted between internal services and to external parties must use TLS 1.2 or higher.
+
+5. Disaster Recovery Execution
+In the event that a disaster recovery declaration is made, the infrastructure team executes
+the recovery runbook to restore systems in priority order as defined in the business
+continuity plan. Recovery progress is communicated to the executive team and affected
+business units until services are fully restored.
+
+6. Retention
+Backup data is retained according to the data retention schedule and securely deleted once
+the retention period expires.

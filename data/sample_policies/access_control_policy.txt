@@ -1,0 +1,32 @@
+ACCESS CONTROL POLICY
+
+1. Purpose
+This policy defines the requirements for managing user identities, authentication, and access
+to company systems and data.
+
+2. Identity and Credential Management
+All employees, contractors, and service accounts must be issued a unique identity managed
+through the corporate identity provider. Credentials must not be shared between users or
+systems. Multi-factor authentication is required for all remote access and for access to
+systems classified as Confidential or higher.
+
+3. Least Privilege and Access Reviews
+Access to systems and data must be granted based on job role and reviewed by the resource
+owner at least every 90 days. Access permissions must be revoked within 24 hours of an
+employee's termination or role change. Elevated (administrative) access requires separate
+approval from the employee's manager and the security team, and must be logged.
+
+4. Password and Authentication Standards
+Passwords must meet minimum complexity requirements and be rotated in accordance with the
+corporate password standard. Service accounts must use vaulted credentials with automatic
+rotation where technically feasible.
+
+5. Training
+New hires must complete a security awareness training module covering acceptable use,
+phishing recognition, and access control responsibilities within their first 30 days of
+employment. Refresher training is required annually for all staff.
+
+6. Enforcement
+Violations of this policy may result in disciplinary action up to and including termination.
+This policy is reviewed annually by the security governance committee and updates are
+communicated to all staff.

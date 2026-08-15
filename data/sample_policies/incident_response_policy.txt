@@ -1,0 +1,30 @@
+INCIDENT RESPONSE POLICY
+
+1. Purpose
+This policy establishes how the organization detects, analyzes, contains, and communicates
+about cybersecurity incidents.
+
+2. Detection and Monitoring
+Security-relevant logs from network devices, servers, and endpoints must be forwarded to the
+central logging platform. The security operations function monitors these logs and alerts
+around the clock for indicators of potentially adverse activity.
+
+3. Incident Declaration and Response
+When an event is confirmed as a security incident, the on-call incident commander activates
+the incident response plan. Response activities are coordinated with relevant internal teams
+and, where applicable, external parties such as forensics vendors or law enforcement.
+
+4. Root Cause Analysis
+Following containment, the incident response team performs an analysis to determine the
+sequence of events, the root cause, and the scope of impact. Findings are documented in a
+post-incident report.
+
+5. Stakeholder Communication
+Internal stakeholders are notified according to the severity matrix defined in the incident
+response runbook. Legal and compliance teams determine whether external notification to
+regulators, customers, or partners is required based on applicable laws and contractual
+obligations.
+
+6. Plan Maintenance
+The incident response plan is tested annually through a tabletop exercise and updated based
+on lessons learned.

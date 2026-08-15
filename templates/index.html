@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>AuditRAG — Framework Coverage Dashboard</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
+</head>
+<body>
+  <header class="topbar">
+    <div>
+      <h1>AuditRAG</h1>
+      <p class="subtitle">NIST CSF 2.0 coverage vs. organizational policies</p>
+    </div>
+    <button id="refresh-btn" onclick="refresh()">Re-run analysis</button>
+  </header>
+
+  <section class="summary-cards">
+    <div class="card">
+      <span class="card-label">Controls analyzed</span>
+      <span class="card-value">{{ total }}</span>
+    </div>
+    <div class="card covered">
+      <span class="card-label">Covered</span>
+      <span class="card-value">{{ covered }}</span>
+    </div>
+    <div class="card partial">
+      <span class="card-label">Partial</span>
+      <span class="card-value">{{ partial }}</span>
+    </div>
+    <div class="card gap">
+      <span class="card-label">Gap</span>
+      <span class="card-value">{{ gap }}</span>
+    </div>
+    <div class="card coverage">
+      <span class="card-label">Full coverage</span>
+      <span class="card-value">{{ coverage_pct }}%</span>
+    </div>
+  </section>
+
+  {% for function, controls in grouped.items() %}
+  <section class="function-block">
+    <h2>{{ function }}</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Control</th>
+          <th>Description</th>
+          <th>Status</th>
+          <th>Confidence</th>
+          <th>Best matching policy text</th>
+          <th>Gap analysis</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for c in controls %}
+        <tr>
+          <td class="control-id">{{ c.id }}</td>
+          <td class="description">{{ c.description }}</td>
+          <td><span class="badge {{ c.status|lower }}">{{ c.status }}</span></td>
+          <td class="confidence">{{ "%.0f"|format(c.confidence * 100) }}%</td>
+          <td class="excerpt">
+            {% if c.best_match_excerpt %}
+              <div class="excerpt-source">{{ c.best_match_source }}</div>
+              <div class="excerpt-text">{{ c.best_match_excerpt }}</div>
+            {% else %}
+              <span class="none">No matching text found</span>
+            {% endif %}
+          </td>
+          <td class="narrative">{{ c.narrative }}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </section>
+  {% endfor %}
+
+  <script>
+    async function refresh() {
+      const btn = document.getElementById('refresh-btn');
+      btn.disabled = true;
+      btn.textContent = 'Running…';
+      const res = await fetch('/refresh');
+      if (res.ok) {
+        location.reload();
+      } else {
+        btn.disabled = false;
+        btn.textContent = 'Re-run analysis';
+      }
+    }
+  </script>
+</body>
+</html>
