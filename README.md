@@ -1,4 +1,4 @@
-# AuditRAG — RAG-Based Policy & Control Auditor
+# AuditRAG - RAG-Based Policy & Control Auditor
 
 Maps organizational security policy documents against NIST CSF 2.0 controls and flags
 coverage gaps, with a confidence score per control and an LLM-generated explanation.
