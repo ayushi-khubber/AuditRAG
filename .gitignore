@@ -1,7 +1,8 @@
+.env
+.env.*
+!.env.example
+
 venv/
 __pycache__/
 *.pyc
-.env
-data/report.json
 .DS_Store
-*.egg-info/
